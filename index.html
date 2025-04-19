@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabbewallah - Tiffin Services & Dine In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <span class="logo-dabbe">dabbe</span><span class="logo-wallah">wallah</span>
+                <div class="logo-line"></div>
+                <div class="logo-tagline">TIFFIN SERVICES & DINE IN</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Taste Like Restaurant Food Delivered Daily</h1>
+            <p>Fresh, healthy, and authentic Indian meals delivered to your doorstep</p>
+            <button class="cta-button">Order Now</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Weekly Menu</h2>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab('week1')">Week 1</button>
+                <button class="tab-btn" onclick="openTab('week2')">Week 2</button>
+                <button class="tab-btn" onclick="openTab('week3')">Week 3</button>
+                <button class="tab-btn" onclick="openTab('week4')">Week 4</button>
+            </div>
+
+            <div id="week1" class="tab-content active">
+                <div class="menu-cards">
+                    <div class="day-card">
+                        <div class="day-header">Monday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Mot Masala</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Mix Veg. rassa</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Tuesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Aloo Chatani</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Patodi</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Wednesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dal Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Masala Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Sawaji Anda Curry/ Soyabin</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Thursday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Masala Aloo</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Sev Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Friday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Zunka</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Palak Paneer</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Saturday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Shengdana Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Veg kolhapuri</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Sunday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Chikhan Varhadi / Kaju Curry</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Khichdi</span></div>
+                                <div class="item-line"><span class="item-text">Kadhi/Mattha</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                                <div class="item-line"><span class="item-text">Lal Mirch</span></div>
+                                <div class="item-line"><span class="item-text">Lal Mirchi Chatani</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="week2" class="tab-content">
+                <div class="menu-cards">
+                    <div class="day-card">
+                        <div class="day-header">Monday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Kabli Chana</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Aloo Palak</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Tuesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Patta Gobi</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Soyabean</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Wednesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dal Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Masala Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Sawaji Anda Curry / Sev Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Thursday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Gobi</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Matar Rassa</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Friday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Moong Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Kadhai Paneer</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Saturday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Kadhi Pakoda</span></div>
+                                <div class="item-line"><span class="item-text">Dal tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Palak Paratha</span></div>
+                                <div class="item-line"><span class="item-text">Dahi</span></div>
+                                <div class="item-line"><span class="item-text">Pulao</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Sunday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Veg Biryani / Non-Veg Biryani</span></div>
+                                <div class="item-line"><span class="item-text">Mattha</span></div>
+                                <div class="item-line"><span class="item-text">Garvy</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Close</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="week3" class="tab-content">
+                <div class="menu-cards">
+                    <div class="day-card">
+                        <div class="day-header">Monday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Aloo Chole</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dal Makhani</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Tuesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Gobi Tamatar</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Gatta Sabji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Wednesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dal Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Masala Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Sawaji Anda Curry / Soyabin</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Thursday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Baigan</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Sev Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Friday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Zunka</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Masala Paneer</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Saturday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dalvang</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Aloo Chatani K</span></div>
+                                <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Sunday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Masala Chicken / Masala Kaju</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                                <div class="item-line"><span class="item-text">Mattha</span></div>
+                                <div class="item-line"><span class="item-text">Sweet</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Pulao</span></div>
+                                <div class="item-line"><span class="item-text">Kadhi/Mattha</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="week4" class="tab-content">
+                <div class="menu-cards">
+                    <div class="day-card">
+                        <div class="day-header">Monday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Masala Barbati</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal fry</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Kopta Curry</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                                <div class="item-line"><span class="item-text">Til Chatani</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Tuesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dal Makhani</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Masala Gobi</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Wednesday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dal Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Masala Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Sawaji Anda Curry / Sev Bhaji</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Thursday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Tamatar Chatani</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Matar Rassa</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Friday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Baigan Bharta</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Dal Fry</span></div>
+                                <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Varhadi Paneer</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Saturday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Koval</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Rice</span></div>
+                                <div class="item-line"><span class="item-text">Dal</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Dum Aloo</span></div>
+                                <div class="item-line"><span class="item-text">Chapati</span></div>
+                                <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="day-card">
+                        <div class="day-header">Sunday</div>
+                        <div class="meal-tabs">
+                            <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                            <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍴 Lunch</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Veg Biryani / Non-Veg Biryani</span></div>
+                                <div class="item-line"><span class="item-text">Mattha</span></div>
+                                <div class="item-line"><span class="item-text">Gravy</span></div>
+                                <div class="item-line"><span class="item-text">Salad</span></div>
+                                <div class="item-line"><span class="item-text">Pickle</span></div>
+                            </div>
+                        </div>
+                        <div class="meal-container">
+                            <div class="meal-type">🍲 Dinner</div>
+                            <div class="meal-items">
+                                <div class="item-line"><span class="item-text">Close</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Tables Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Detailed Pricing</h2>
+            <p class="section-description">Choose the perfect meal plan that fits your lifestyle and budget. We offer flexible options for every need.</p>
+            
+            <!-- Tiffin Monthly Plans -->
+            <h3 class="pricing-category-title">Tiffin (Monthly)</h3>
+            <div class="pricing-table-wrapper">
+                <table class="pricing-grid">
+                    <tr class="header-row">
+                        <th>Full tiffin</th>
+                        <th>Full tiffin</th>
+                        <th>Full tiffin</th>
+                        <th>Full tiffin</th>
+                        <th>Half Tiffin</th>
+                        <th>Half tiffin</th>
+                    </tr>
+                    <tr>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-veg</td>
+                    </tr>
+                    <tr>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>1 time</td>
+                        <td>1 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                    </tr>
+                    <tr>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                        <td>3 roti</td>
+                        <td>3 roti</td>
+                    </tr>
+                    <tr class="price-row">
+                        <td>2300rs</td>
+                        <td>2400rs</td>
+                        <td>1300</td>
+                        <td>1400</td>
+                        <td>1600</td>
+                        <td>1800</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Dine In full Monthly -->
+            <h3 class="pricing-category-title">Dine In full (Monthly)</h3>
+            <div class="pricing-table-wrapper">
+                <table class="pricing-grid">
+                    <tr class="header-row">
+                        <th>Dine In</th>
+                        <th>Dine in</th>
+                        <th>Dine in</th>
+                        <th>Dine in</th>
+                    </tr>
+                    <tr>
+                        <td class="veg">Veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-veg</td>
+                        <td class="non-veg">Non-veg</td>
+                    </tr>
+                    <tr>
+                        <td>Boys</td>
+                        <td>Girl</td>
+                        <td>Boy</td>
+                        <td>Girl</td>
+                    </tr>
+                    <tr>
+                        <td>Unlimited for 1 person</td>
+                        <td>Unlimited for 1 person</td>
+                        <td>Unlimited for 1 person</td>
+                        <td>Unlimited for 1 person</td>
+                    </tr>
+                    <tr>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                    </tr>
+                    <tr class="price-row">
+                        <td>2300</td>
+                        <td>1800</td>
+                        <td>2400</td>
+                        <td>2000</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Dine In 1 time Monthly -->
+            <h3 class="pricing-category-title">Dine in 1 time (Monthly)</h3>
+            <div class="pricing-table-wrapper">
+                <table class="pricing-grid">
+                    <tr class="header-row">
+                        <th>Dine In</th>
+                        <th>Dine in</th>
+                        <th>Dine in</th>
+                        <th>Dine in</th>
+                    </tr>
+                    <tr>
+                        <td class="veg">Veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-veg</td>
+                        <td class="non-veg">Non-veg</td>
+                    </tr>
+                    <tr>
+                        <td>Boys</td>
+                        <td>Girl</td>
+                        <td>Boy</td>
+                        <td>Girl</td>
+                    </tr>
+                    <tr>
+                        <td>Unlimited for 1 person</td>
+                        <td>Unlimited for 1 person</td>
+                        <td>Unlimited for 1 person</td>
+                        <td>Unlimited for 1 person</td>
+                    </tr>
+                    <tr>
+                        <td>1 time</td>
+                        <td>1 time</td>
+                        <td>1 time</td>
+                        <td>1 time</td>
+                    </tr>
+                    <tr class="price-row">
+                        <td>1300</td>
+                        <td>1200</td>
+                        <td>1400</td>
+                        <td>1300</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 10 Days Plan -->
+            <h3 class="pricing-category-title">10 Days Plan</h3>
+            <div class="pricing-table-wrapper">
+                <table class="pricing-grid">
+                    <tr>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-Veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-Veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-Veg</td>
+                    </tr>
+                    <tr>
+                        <td>Full tiffin</td>
+                        <td>Full tiffin</td>
+                        <td>Half tiffin</td>
+                        <td>Half tiffin</td>
+                        <td>Full tiffin</td>
+                        <td>Full tiffin</td>
+                    </tr>
+                    <tr>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>1 time</td>
+                        <td>1 time</td>
+                    </tr>
+                    <tr>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                        <td>3 roti</td>
+                        <td>3 roti</td>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                    </tr>
+                    <tr class="price-row">
+                        <td>800</td>
+                        <td>900</td>
+                        <td>600</td>
+                        <td>700</td>
+                        <td>400</td>
+                        <td>450</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 15 Days Plan -->
+            <h3 class="pricing-category-title">15 Days Plan</h3>
+            <div class="pricing-table-wrapper">
+                <table class="pricing-grid">
+                    <tr>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-Veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-Veg</td>
+                        <td class="veg">Veg</td>
+                        <td class="non-veg">Non-Veg</td>
+                    </tr>
+                    <tr>
+                        <td>Full tiffin</td>
+                        <td>Full tiffin</td>
+                        <td>Half tiffin</td>
+                        <td>Half tiffin</td>
+                        <td>Full tiffin</td>
+                        <td>Full tiffin</td>
+                    </tr>
+                    <tr>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>2 time</td>
+                        <td>1 time</td>
+                        <td>1 time</td>
+                    </tr>
+                    <tr>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                        <td>3 roti</td>
+                        <td>3 roti</td>
+                        <td>5-7 roti</td>
+                        <td>5-7 roti</td>
+                    </tr>
+                    <tr class="price-row">
+                        <td>1200</td>
+                        <td>1300</td>
+                        <td>800</td>
+                        <td>900</td>
+                        <td>600</td>
+                        <td>650</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="cta-container">
+                <a href="#contact" class="btn-primary">Subscribe Now</a>
+                <a href="tel:7057684137" class="btn-secondary">Call for Custom Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Dabbewallah is committed to providing nutritious, home-style meals for students and professionals who miss home-cooked food. Our daily changing menu ensures variety and complete nutrition.</p>
+                    <p>We use fresh ingredients and authentic recipes to bring you the taste of home, delivered right to your doorstep or enjoyed at our mess facility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <h3>Merchant Legal entity name: DEVAL CHANDRAKANT PACHGHARE</h3>
+                    <p><strong>Address:</strong> 8 Hollywood colony Kathora nakka, Amravati, Maharashtra, PIN: 444602</p>
+                    <p><strong>Phone:</strong> 7057684137</p>
+                    <p><strong>Email:</strong> dabbewallah.com04@gmail.com</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone Number" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button class="submit-button" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-dabbe">dabbe</span><span class="logo-wallah">wallah</span>
+                </div>
+                <div class="footer-links">
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="refund.html">Cancellation & Refund Policy</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">WA</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 Dabbewallah. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html> 

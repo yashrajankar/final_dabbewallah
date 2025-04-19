@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabbewallah - Tiffin Services & Dine In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tab Navigation Styles */
+        .page-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            background: var(--white);
+            padding: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .page-tab-btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: none;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--dark-gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .page-tab-btn:hover {
+            background-color: rgba(255, 90, 60, 0.1);
+            color: var(--orange-red);
+        }
+        
+        .page-tab-btn.active {
+            background-color: var(--orange-red);
+            color: var(--white);
+        }
+        
+        .page-content {
+            display: none;
+        }
+        
+        .page-content.active {
+            display: block;
+        }
+        
+        /* Terms and Refund Policy Styles */
+        .terms-section, .policy-section {
+            padding: 60px 0 80px;
+        }
+        
+        .terms-content, .policy-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .terms-content h3, .policy-content h3 {
+            margin-top: 30px;
+            color: var(--orange-red);
+        }
+        
+        .terms-content ul, .policy-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .terms-content li {
+            margin-bottom: 10px;
+        }
+        
+        .policy-content li {
+            margin-bottom: 20px;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <span class="logo-dabbe">dabbe</span><span class="logo-wallah">wallah</span>
+                <div class="logo-line"></div>
+                <div class="logo-tagline">TIFFIN SERVICES & DINE IN</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="openContentTab('home-content', event)">Home</a></li>
+                <li><a href="#menu" onclick="openContentTab('home-content', event)">Menu</a></li>
+                <li><a href="#pricing" onclick="openContentTab('home-content', event)">Pricing</a></li>
+                <li><a href="#about" onclick="openContentTab('home-content', event)">About</a></li>
+                <li><a href="#contact" onclick="openContentTab('home-content', event)">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Navigation Tabs -->
+    <div class="page-tabs">
+        <button class="page-tab-btn active" onclick="openContentTab('home-content', event)">Home</button>
+        <button class="page-tab-btn" onclick="openContentTab('terms-content', event)">Terms & Conditions</button>
+        <button class="page-tab-btn" onclick="openContentTab('refund-content', event)">Refund Policy</button>
+    </div>
+
+    <!-- Home Page Content -->
+    <div id="home-content" class="page-content active">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Taste like restaurant Food Delivered Daily</h1>
+                <p>Fresh, healthy, and authentic Indian meals delivered to your doorstep</p>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>Our Weekly Menu</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="openTab('week1', event)">Week 1</button>
+                    <button class="tab-btn" onclick="openTab('week2', event)">Week 2</button>
+                    <button class="tab-btn" onclick="openTab('week3', event)">Week 3</button>
+                    <button class="tab-btn" onclick="openTab('week4', event)">Week 4</button>
+                </div>
+
+                <div id="week1" class="tab-content active">
+                    <div class="menu-cards">
+                        <div class="day-card">
+                            <div class="day-header">Monday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Mot Masala</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Mix Veg. rassa</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Tuesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Aloo Chatani</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Patodi</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Wednesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Dal Bhaji</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Masala Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Sawaji Anda Curry/ Soyabin</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Thursday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Masala Aloo</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Sev Bhaji</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Friday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Zunka</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Palak Paneer</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Saturday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Shengdana Bhaji</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Veg kolhapuri</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Sunday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Chikhan Varhadi / Kaju Curry</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Khichdi</span></div>
+                                    <div class="item-line"><span class="item-text">Kadhi/Mattha</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                    <div class="item-line"><span class="item-text">Lal Mirch</span></div>
+                                    <div class="item-line"><span class="item-text">Lal Mirchi Chatani</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="week2" class="tab-content">
+                    <div class="menu-cards">
+                        <div class="day-card">
+                            <div class="day-header">Monday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Kabli Chana</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Aloo Palak</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Tuesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Patta Gobi</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Dal Tadaka</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Soyabean</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Wednesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Dal Bhaji</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Masala Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Sawaji Anda Curry / Sev Bhaji</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Thursday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Gobi</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Matar Rassa</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Friday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Moong Dal Tadaka</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Kadhai Paneer</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Saturday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Kadhi Pakoda</span></div>
+                                    <div class="item-line"><span class="item-text">Dal tadaka</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Plain Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Palak Paratha</span></div>
+                                    <div class="item-line"><span class="item-text">Dahi</span></div>
+                                    <div class="item-line"><span class="item-text">Pulao</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Sunday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Veg Biryani / Non-Veg Biryani</span></div>
+                                    <div class="item-line"><span class="item-text">Mattha</span></div>
+                                    <div class="item-line"><span class="item-text">Garvy</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Close</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="week3" class="tab-content">
+                    <div class="menu-cards">
+                        <div class="day-card">
+                            <div class="day-header">Monday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Aloo Chole</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Dal Makhani</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Tuesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Rajma Masala</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Mixed Veg Curry</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Wednesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Aloo Gobi</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal Fry</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Paneer Bhurji</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Thursday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Methi Matar Malai</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal Tadka</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Baingan Bharta</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Friday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Chole Bhature</span></div>
+                                    <div class="item-line"><span class="item-text">Raita</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Malai Kofta</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Pulao</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Saturday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Aloo Paratha</span></div>
+                                    <div class="item-line"><span class="item-text">Curd</span></div>
+                                    <div class="item-line"><span class="item-text">Butter</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Shahi Paneer</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Sunday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Special Thali</span></div>
+                                    <div class="item-line"><span class="item-text">Paneer Dish</span></div>
+                                    <div class="item-line"><span class="item-text">Pulao</span></div>
+                                    <div class="item-line"><span class="item-text">Sweet</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Pav Bhaji</span></div>
+                                    <div class="item-line"><span class="item-text">Butter</span></div>
+                                    <div class="item-line"><span class="item-text">Onions</span></div>
+                                    <div class="item-line"><span class="item-text">Lemon</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="week4" class="tab-content">
+                    <div class="menu-cards">
+                        <div class="day-card">
+                            <div class="day-header">Monday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Masala Barbati</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal fry</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Kopta Curry</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                    <div class="item-line"><span class="item-text">Til Chatani</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Tuesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Bhindi Masala</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Chana Masala</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Wednesday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Matar Paneer</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Egg Curry</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Thursday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Lauki Kofta</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Aloo Matar</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Friday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Dal Tadka</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Butter Chicken</span></div>
+                                    <div class="item-line"><span class="item-text">Naan</span></div>
+                                    <div class="item-line"><span class="item-text">Jeera Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Saturday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Mix Veg</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Dal</span></div>
+                                    <div class="item-line"><span class="item-text">Rice</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Paneer Butter Masala</span></div>
+                                    <div class="item-line"><span class="item-text">Chapati</span></div>
+                                    <div class="item-line"><span class="item-text">Pulao</span></div>
+                                    <div class="item-line"><span class="item-text">Salad</span></div>
+                                    <div class="item-line"><span class="item-text">Pickle</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-card">
+                            <div class="day-header">Sunday</div>
+                            <div class="meal-tabs">
+                                <div class="meal-tab"><i class="utensil">🍴</i> Lunch</div>
+                                <div class="meal-tab"><i class="utensil">🍲</i> Dinner</div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍴 Lunch</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Special Lunch</span></div>
+                                    <div class="item-line"><span class="item-text">Malai Kofta</span></div>
+                                    <div class="item-line"><span class="item-text">Butter Naan</span></div>
+                                    <div class="item-line"><span class="item-text">Veg Biryani</span></div>
+                                    <div class="item-line"><span class="item-text">Raita</span></div>
+                                    <div class="item-line"><span class="item-text">Sweet</span></div>
+                                </div>
+                            </div>
+                            <div class="meal-container">
+                                <div class="meal-type">🍲 Dinner</div>
+                                <div class="meal-items">
+                                    <div class="item-line"><span class="item-text">Close</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tables Section -->
+        <section id="pricing" class="pricing-section" style="background-color: #fff8f5; padding: 60px 0; border-top: 3px solid var(--orange-red); border-bottom: 3px solid var(--orange-red);">
+            <div class="container">
+                <h2 style="color: var(--orange-red); font-size: 2.5rem; text-align: center; margin-bottom: 30px; text-transform: uppercase; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">Detailed Pricing</h2>
+                <p class="section-description" style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #444;">Choose the perfect meal plan that fits your lifestyle and budget. We offer flexible options for every need.</p>
+                
+                <div class="pricing-tables">
+                    <!-- Tiffin (Monthly) -->
+                    <h3 class="pricing-category-title" style="background-color: var(--orange-red); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">Tiffin (Monthly)</h3>
+                    <table class="pricing-table" style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Full tiffin</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Full tiffin</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Full tiffin</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Full tiffin</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Half Tiffin</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Half tiffin</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">3 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">3 roti</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">2300rs</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">2400rs</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">1300</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">1400</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">1600</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">1800</td>
+                        </tr>
+                    </table>
+
+                    <!-- Dine In full (Monthly) -->
+                    <h3 class="pricing-category-title" style="background-color: var(--orange-red); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">Dine In full (Monthly)</h3>
+                    <table class="pricing-table" style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #d4f7da; padding: 3px 8px; border-radius: 4px;">Boy</span></td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #ffd9e8; padding: 3px 8px; border-radius: 4px;">Girl</span></td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #d4f7da; padding: 3px 8px; border-radius: 4px;">Boy</span></td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #ffd9e8; padding: 3px 8px; border-radius: 4px;">Girl</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center; font-weight: bold;">2300</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center; font-weight: bold;">1800</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center; font-weight: bold;">2400</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center; font-weight: bold;">2000</td>
+                        </tr>
+                    </table>
+
+                    <!-- Dine In 1 time (Monthly) -->
+                    <h3 class="pricing-category-title" style="background-color: var(--orange-red); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">Dine In 1 time (Monthly)</h3>
+                    <table class="pricing-table" style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Dine in</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #d4f7da; padding: 3px 8px; border-radius: 4px;">Boy</span></td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #ffd9e8; padding: 3px 8px; border-radius: 4px;">Girl</span></td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #d4f7da; padding: 3px 8px; border-radius: 4px;">Boy</span></td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;"><span style="font-weight: 700; background-color: #ffd9e8; padding: 3px 8px; border-radius: 4px;">Girl</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Unlimited for 1 person</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center; font-weight: bold;">1300</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center; font-weight: bold;">1200</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center; font-weight: bold;">1400</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center; font-weight: bold;">1300</td>
+                        </tr>
+                    </table>
+
+                    <!-- Trial or Guest (Single) -->
+                    <h3 class="pricing-category-title" style="background-color: var(--orange-red); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">Trial or Guest (Single)</h3>
+                    <table class="pricing-table" style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Tiffin</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Tiffin</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Dine In</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Dine In</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Veg</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Non-veg</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center; font-weight: bold;">90</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center; font-weight: bold;">130</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center; font-weight: bold;">100</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center; font-weight: bold;">140</td>
+                        </tr>
+                    </table>
+
+                    <!-- 10 Days Plan -->
+                    <h3 class="pricing-category-title" style="background-color: var(--orange-red); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">10 Days Plan</h3>
+                    <table class="pricing-table" style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Veg</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Non-Veg</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Veg</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Non-Veg</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Veg</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Non-Veg</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Half tiffin</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Half tiffin</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">3 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">3 roti</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">800</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">900</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">600</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">700</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">400</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">450</td>
+                        </tr>
+                    </table>
+
+                    <!-- 15 Days Plan -->
+                    <h3 class="pricing-category-title" style="background-color: var(--orange-red); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">15 Days Plan</h3>
+                    <table class="pricing-table" style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                        <tr>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Veg</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Non-Veg</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Veg</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Non-Veg</th>
+                            <th style="padding: 12px; background-color: #d8f3db; border: 1px solid #ccc; text-align: center;">Veg</th>
+                            <th style="padding: 12px; background-color: #ffdbd1; border: 1px solid #ccc; text-align: center;">Non-Veg</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Half tiffin</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Half tiffin</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">Full tiffin</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">2 time</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center;">1 time</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center;">1 time</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">3 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">3 roti</td>
+                            <td style="padding: 12px; background-color: #eaffed; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                            <td style="padding: 12px; background-color: #ffede8; border: 1px solid #ccc; text-align: center;">5-7 roti</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">1200</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">1300</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">800</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">900</td>
+                            <td style="padding: 12px; background-color: #f5fff8; border: 1px solid #ccc; text-align: center; font-weight: bold;">600</td>
+                            <td style="padding: 12px; background-color: #fff5f2; border: 1px solid #ccc; text-align: center; font-weight: bold;">650</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Dabbewallah is committed to providing nutritious, home-style meals for students and professionals who miss home-cooked food. Our daily changing menu ensures variety and complete nutrition.</p>
+                        <p>We use fresh ingredients and authentic recipes to bring you the taste of home, delivered right to your doorstep or enjoyed at our mess facility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <h3>Contact Information</h3>
+                        <p><strong>Address:</strong> 8 Hollywood colony Kathora nakka, Amravati, Maharashtra, PIN: 444602</p>
+                        <p><strong>Phone:</strong> <a href="tel:7057684137" style="color: inherit; text-decoration: none;">7057684137</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:dabbewallah.com04@gmail.com" style="color: inherit; text-decoration: none;">dabbewallah.com04@gmail.com</a></p>
+                        <p><strong>Hours:</strong> Monday to Saturday, 8:00 AM - 9:00 PM</p>
+                        <div class="contact-actions" style="margin-top: 20px;">
+                            <a href="tel:7057684137" class="btn-primary">Call Us</a>
+                            <a href="mailto:dabbewallah.com04@gmail.com" class="btn-secondary">Email Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Terms & Conditions Content -->
+    <div id="terms-content" class="page-content">
+        <section class="terms-section">
+            <div class="container">
+                <h2>Terms & Conditions</h2>
+                <div class="terms-content">
+                    <p class="last-updated">Last updated on 15-04-2025 01:40:48</p>
+                    
+                    <p>These Terms and Conditions, along with privacy policy or other terms ("Terms") constitute a binding agreement by and between DEVAL CHANDRAKANT PACHGHARE. ("Website Owner" or "we" or "us" or "our") and you ("you" or "your") and relate to your use of our website, goods (as applicable) or services (as applicable) (collectively, "Services").</p>
+                    
+                    <p>By using our website and availing the Services, you agree that you have read and accepted these Terms (including the Privacy Policy). We reserve the right to modify these Terms at any time and without assigning any reason. It is your responsibility to periodically review these Terms to stay informed of updates.</p>
+                    
+                    <p>The use of this website or availing of our Services is subject to the following terms of use:</p>
+                    
+                    <ul>
+                        <li>To access and use the Services, you agree to provide true, accurate and complete information to us during and after registration, and you shall be responsible for all acts done through the use of your registered account.</li>
+                        <li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials offered on this website or through the Services, for any specific purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
+                        <li>Your use of our Services and the website is solely at your own risk and discretion. You are required to independently assess and ensure that the Services meet your requirements.</li>
+                        <li>The contents of the Website and the Services are proprietary to Us and you will not have any authority to claim any intellectual property rights, title, or interest in its contents.</li>
+                        <li>You acknowledge that unauthorized use of the Website or the Services may lead to action against you as per these Terms or applicable laws.</li>
+                        <li>You agree to pay us the charges associated with availing the Services.</li>
+                        <li>You agree not to use the website and/or Services for any purpose that is unlawful, illegal or forbidden by these Terms, or Indian or local laws that might apply to you.</li>
+                        <li>You agree and acknowledge that website and the Services may contain links to other third party websites. On accessing these links, you will be governed by the terms of use, privacy policy and such other policies of such third party websites.</li>
+                        <li>You understand that upon initiating a transaction for availing the Services you are entering into a legally binding and enforceable contract with the us for the Services.</li>
+                        <li>You shall be entitled to claim a refund of the payment made by you in case we are not able to provide the Service. The timelines for such return and refund will be according to the specific Service you have availed or within the time period provided in our policies (as applicable). In case you do not raise a refund claim within the stipulated time, then this would make you ineligible for a refund.</li>
+                        <li>Notwithstanding anything contained in these Terms, the parties shall not be liable for any failure to perform an obligation under these Terms if performance is prevented or delayed by a force majeure event.</li>
+                        <li>These Terms and any dispute or claim relating to it, or its enforceability, shall be governed by and construed in accordance with the laws of India.</li>
+                        <li>All disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts in Amravati, Maharashtra.</li>
+                        <li>All concerns or communications relating to these Terms must be communicated to us using the contact information provided on the website.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Refund Policy Content -->
+    <div id="refund-content" class="page-content">
+        <section class="policy-section">
+            <div class="container">
+                <h2>Cancellation & Refund Policy</h2>
+                <div class="policy-content">
+                    <p class="last-updated">Last updated on 15-04-2025 01:40:07</p>
+                    
+                    <p>DEVAL CHANDRAKANT PACHGHARE believes in helping its customers as far as possible, and has therefore a liberal cancellation policy. Under this policy:</p>
+                    
+                    <ul>
+                        <li>
+                            <strong>Cancellation Requests:</strong> Cancellations will be considered only if the request is made immediately after placing the order. However, the cancellation request may not be entertained if the orders have been communicated to the vendors/merchants and they have initiated the process of shipping them.
+                        </li>
+                        
+                        <li>
+                            <strong>Perishable Items:</strong> DEVAL CHANDRAKANT PACHGHARE does not accept cancellation requests for perishable items like flowers, eatables etc. However, refund/replacement can be made if the customer establishes that the quality of product delivered is not good.
+                        </li>
+                        
+                        <li>
+                            <strong>Damaged or Defective Items:</strong> In case of receipt of damaged or defective items please report the same to our Customer Service team. The request will, however, be entertained once the merchant has checked and determined the same at his own end. This should be reported within the same day of receipt of the products. In case you feel that the product received is not as shown on the site or as per your expectations, you must bring it to the notice of our customer service within the same day of receiving the product. The Customer Service Team after looking into your complaint will take an appropriate decision.
+                        </li>
+                        
+                        <li>
+                            <strong>Warranty Claims:</strong> In case of complaints regarding products that come with a warranty from manufacturers, please refer the issue to them. In case of any Refunds approved by DEVAL CHANDRAKANT PACHGHARE, it will take 3-5 Days days for the refund to be processed to the end customer.
+                        </li>
+                    </ul>
+                    
+                    <h3>How to Request a Refund</h3>
+                    
+                    <p>To request a refund or report quality issues, please contact us at:</p>
+                    <p><strong>Phone:</strong> 7057684137</p>
+                    <p><strong>Email:</strong> dabbewallah.com04@gmail.com</p>
+                    
+                    <h3>Refund Processing Time</h3>
+                    
+                    <p>Once your refund is approved, the amount will be credited back to your original payment method within 3-5 business days. The exact timing may depend on your payment provider.</p>
+                    
+                    <h3>Special Cases</h3>
+                    
+                    <p>For monthly subscription plans, refunds will be processed on a pro-rata basis for the unused days if the cancellation request is made in the middle of the subscription period.</p>
+                    
+                    <p>For any further clarification on our refund policy, please feel free to contact our customer support team.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-dabbe">dabbe</span><span class="logo-wallah">wallah</span>
+                    </div>
+                    <p class="footer-tagline">Fresh, taste like restaurant meals delivered daily</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#" onclick="openContentTab('home-content', event)">Home</a>
+                        <a href="#menu" onclick="openContentTab('home-content', event)">Menu</a>
+                        <a href="#pricing" onclick="openContentTab('home-content', event)">Pricing</a>
+                        <a href="#about" onclick="openContentTab('home-content', event)">About</a>
+                        <a href="#contact" onclick="openContentTab('home-content', event)">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-heading">Legal</h3>
+                    <div class="footer-links">
+                        <a href="#" onclick="openContentTab('terms-content', event)">Terms & Conditions</a>
+                        <a href="#" onclick="openContentTab('refund-content', event)">Cancellation & Refund Policy</a>
+                        <a href="#" onclick="openContentTab('home-content', event)">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Dabbewallah. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Font Awesome for social icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function openTab(tabName, event) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            // Show the selected tab content and mark button as active
+            const tabElement = document.getElementById(tabName);
+            if (tabElement) {
+                tabElement.classList.add("active");
+            }
+            
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add("active");
+            }
+            
+            // Prevent default link behavior
+            if (event) {
+                event.preventDefault();
+            }
+        }
+        
+        function openContentTab(contentId, event) {
+            // Hide all page contents
+            const pageContents = document.getElementsByClassName("page-content");
+            for (let i = 0; i < pageContents.length; i++) {
+                pageContents[i].classList.remove("active");
+            }
+            
+            // Remove active class from all page tab buttons
+            const pageTabButtons = document.getElementsByClassName("page-tab-btn");
+            for (let i = 0; i < pageTabButtons.length; i++) {
+                pageTabButtons[i].classList.remove("active");
+            }
+            
+            // Show the selected page content
+            const contentElement = document.getElementById(contentId);
+            if (contentElement) {
+                contentElement.classList.add("active");
+            }
+            
+            // Find and activate the corresponding tab button
+            const tabButtons = document.getElementsByClassName("page-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                if (tabButtons[i].getAttribute("onclick").includes(contentId)) {
+                    tabButtons[i].classList.add("active");
+                }
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Prevent default behavior for links
+            if (event) {
+                event.preventDefault();
+            }
+        }
+
+        // Initialize tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listeners to tab buttons
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].addEventListener('click', function(event) {
+                    const tabId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    openTab(tabId, event);
+                });
+            }
+
+            // Add event listeners to page tab buttons
+            const pageTabButtons = document.getElementsByClassName("page-tab-btn");
+            for (let i = 0; i < pageTabButtons.length; i++) {
+                pageTabButtons[i].addEventListener('click', function(event) {
+                    const contentId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    openContentTab(contentId, event);
+                });
+            }
+            
+            // Ensure week1 tab is displayed by default
+            openTab('week1');
+        });
+
+        // Contact form handler
+        function saveContactData(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                message: form.message.value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Store in localStorage
+            let contactSubmissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            contactSubmissions.push(formData);
+            localStorage.setItem('contactSubmissions', JSON.stringify(contactSubmissions));
+            
+            // Show success message
+            document.getElementById('formStatus').style.display = 'block';
+            
+            // Reset form
+            form.reset();
+            
+            // Log submissions to console (for demonstration)
+            console.log('Stored submissions:', contactSubmissions);
+            
+            // Hide success message after 3 seconds
+            setTimeout(() => {
+                document.getElementById('formStatus').style.display = 'none';
+            }, 3000);
+        }
+
+        // View stored contact submissions (admin function)
+        function viewContactSubmissions() {
+            const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            
+            if (submissions.length === 0) {
+                alert('No contact form submissions found');
+                return;
+            }
+            
+            let output = 'Contact Form Submissions:\n\n';
+            submissions.forEach((submission, index) => {
+                output += `Submission #${index + 1}\n`;
+                output += `Name: ${submission.name}\n`;
+                output += `Email: ${submission.email}\n`;
+                output += `Phone: ${submission.phone}\n`;
+                output += `Message: ${submission.message}\n`;
+                output += `Time: ${new Date(submission.timestamp).toLocaleString()}\n\n`;
+            });
+            
+            console.log(output);
+            alert('Submissions loaded to console. Press F12 to view details.');
+        }
+    </script>
+</body>
+</html> 
